@@ -1,0 +1,33 @@
+.container {
+    display: inline-block;
+}
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 25%;
+}
+table td button {
+    width: 5rem;
+    height: 5rem;
+    border: none;
+    background-color: #64748b;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+table td button:hover {
+    background-color: #64748b;
+}
+
+.btn {
+    width: 25%;
+}
+
+.input-container{
+    width: auto;
+}
