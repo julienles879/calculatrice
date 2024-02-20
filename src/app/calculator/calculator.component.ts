@@ -15,6 +15,7 @@ export class CalculatorComponent {
   calcul: string = '';
   result: string = '';
   unite: string = '';
+  titre: string = '';
 
   constructor() {
     const storedInput = localStorage.getItem('currentInput');
@@ -30,6 +31,11 @@ export class CalculatorComponent {
     } else if (value === 'C') {
       console.log('Effacement de la saisie...');
       this.calcul = '';
+      localStorage.removeItem('currentInput');
+    } else if (value === 'sup') {
+      console.log('Effacement complet...');
+      this.calcul = '';
+      this.result = '';
       localStorage.removeItem('currentInput');
     } else {
       console.log('Ajout de la valeur ' + value + ' à la saisie...');

@@ -35,13 +35,51 @@
     border-radius: 5px;
 }
 
+
+
+
+
+.touches button:hover {
+    background-color: #475569;
+}
+
+.container-btn {
+    display: flex;
+    flex-direction: column; /* Modifier la direction en colonne */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .touches {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    border : 1px solid black;
-    padding: 3em;
     margin: 3em;
+}
+
+div.touches {
+    align-items: center;
+}
+
+.container-touche {
+    border : 1px solid black;
+    margin: 1em;
+    border-radius: 15%;
+    background-color: #e7e5e4;
+}
+
+.container-result {
+    display: flex;
+}
+
+.input.result {
+    margin-top: 5em;
+    padding: 1em;
+}
+
+.result {
+    align-items: center;
+    justify-content: center;
 }
 
 .touches button {
@@ -51,10 +89,22 @@
     border: none;
     background-color: #64748b;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
 }
 
-.touches button:hover {
-    background-color: #475569;
+button.operateur{
+    background-color: #fb923c !important;
+}
+
+button.operateur:hover{
+    background-color: #f97316 !important;
+}
+
+#sup{
+    background-color: #b91c1c;
+}
+
+#sup:hover{
+    background-color: #991b1b;
 }
