@@ -1,1 +1,50 @@
-<p>calculator works!</p>
+<div class="container">
+  <div class="container-btn">
+    <button class="btn">Saisir</button>
+    <button class="btn">Lister</button>
+  </div>
+ 
+  <div class="container-result">
+    <div class="input-container">
+      <input type="text" class="input" placeholder="titre">
+    </div>
+    <div>
+      <input type="text" [(ngModel)]="calcul">
+    </div>
+    <div>
+      <input type="text" [(ngModel)]="result" placeholder="Résultat" readonly>
+    </div>
+    <select [(ngModel)]="unite" class="input">
+      <option value="km">km</option>
+      <option value="kg">kg</option>
+    </select>
+  </div>
+    
+  <div class="touches">
+
+    <button (click)="ajouterAuCalcul('(')">(</button>
+    <button (click)="ajouterAuCalcul(')')">)</button>
+    <button (click)="ajouterAuCalcul('.')">.</button>
+    <button (click)="ajouterAuCalcul('...')"> </button>
+
+    <button (click)="ajouterAuCalcul('1')">1</button>
+    <button (click)="ajouterAuCalcul('2')">2</button>
+    <button (click)="ajouterAuCalcul('3')">3</button>
+    <button (click)="ajouterAuCalcul('+')">+</button>
+
+    <button (click)="ajouterAuCalcul('4')">4</button>
+    <button (click)="ajouterAuCalcul('5')">5</button>
+    <button (click)="ajouterAuCalcul('6')">6</button>
+    <button (click)="ajouterAuCalcul('-')">-</button>
+
+    <button (click)="ajouterAuCalcul('7')">7</button>
+    <button (click)="ajouterAuCalcul('8')">8</button>
+    <button (click)="ajouterAuCalcul('9')">9</button>
+    <button (click)="ajouterAuCalcul('*')">*</button>
+
+    <button (click)="ajouterAuCalcul('C')">C</button>
+    <button (click)="ajouterAuCalcul('0')">0</button>
+    <button (click)="ajouterAuCalcul('=')">=</button>
+    <button (click)="ajouterAuCalcul('/')">/</button>
+</div>
+  
