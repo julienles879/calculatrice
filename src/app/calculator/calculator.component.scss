@@ -1,110 +1,148 @@
-.container {
+.conteneur-calculatrice {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-}
-
-.container-btn {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.container-input {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.container-result {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.input-container {
-    margin-right: 10px;
-}
-
-.input {
-    padding: 10px;
-    width: 200px;
+    max-width: 100%;
+    margin: 20px auto; /* Ajout de marge autour du conteneur */
     border: 1px solid #ccc;
-    border-radius: 5px;
-}
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #f9f9f9; /* Ajout d'une couleur de fond */
+  
+    .section-calcul {
+      margin-bottom: 20px;
+      border: 1px solid #ccc; /* Ajout de bordures */
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre */
+      padding: 10px;
+      background-color: #fff; /* Ajout d'une couleur de fond */
+    }
+  
+    .historique-calculs {
+      width: 100%;
+      border-collapse: collapse;
+  
+      th,
+      td {
+        border: 1px solid #ccc; /* Ajout de bordures */
+        padding: 8px;
+      }
+  
+      th {
+        background-color: #64748b;
+        color: #fff;
+        text-align: center;
+      }
+  
+      td {
+        text-align: center;
+      }
+    }
+  
+    .rangee-boutons {
+      display: flex;
+      justify-content: space-around;
+      margin: 10px;
+    }
+  
+    .bouton-calculatrice {
+      padding: 10px;
+      width: 50px;
+      height: 50px;
+      border: none;
+      background-color: #64748b;
+      color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #475569;
+      }
+    }
+  
+    .operateur {
+      background-color: #fb923c;
+  
+      &:hover {
+        background-color: #f97316;
+      }
+    }
+  
+    .entete-historique,
+    .donnees-historique {
+      text-align: center;
+      padding: 5px;
+    }
+  
+    /* Media query pour les appareils de taille inférieure à 768px (tablettes et mobiles) */
+    @media only screen and (max-width: 768px) {
+      .conteneur-calculatrice {
+        max-width: 90%;
+      }
+    }
+  }
+  
+/* Style pour les boutons d'exportation et de suppression */
+.bouton-export,
+.bouton-effacer,
+.bouton-import,
+input[type="file"] {
+  display: block;
+  margin: 10px auto; /* Centrer les boutons horizontalement avec une marge autour */
+  padding: 10px 20px;
+  border: none;
+  background-color: #64748b;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 
-
-
-
-
-.touches button:hover {
+  &:hover {
     background-color: #475569;
+  }
 }
 
-.container-btn {
-    display: flex;
-    flex-direction: column; /* Modifier la direction en colonne */
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.touches {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    margin: 3em;
-}
-
-div.touches {
-    align-items: center;
-}
-
-.container-touche {
-    border : 1px solid black;
-    margin: 1em;
-    border-radius: 15%;
-    background-color: #e7e5e4;
-}
-
-.container-result {
-    display: flex;
-}
-
-.input.result {
-    margin-top: 5em;
-    padding: 1em;
-}
-
-.result {
-    align-items: center;
-    justify-content: center;
-}
-
-.touches button {
-    padding: 10px;
-    width: 50px;
-    height: 50px;
+.input-file-container {
+    display: block;
+    margin: 10px auto; /* Centrer l'élément horizontalement avec une marge autour */
+    position: relative; /* Assure que les éléments enfants positionnés absolument se réfèrent à ce conteneur */
+  }
+  
+  .input-file-container input[type="file"] {
+    position: absolute;
+    left: -9999px; /* Déplace l'élément hors de la vue visuelle */
+  }
+  
+  .input-file-container label {
+    display: block;
+    padding: 10px 20px;
     border: none;
     background-color: #64748b;
     color: #fff;
-    border-radius: 50%;
+    border-radius: 5px;
     cursor: pointer;
-}
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 100px;
+  }
+  
+  .input-file-container label:hover {
+    background-color: #475569;
+  }
+  
+  /* Style pour le texte "Aucun fichier" */
+  .input-file-container input[type="file"]:disabled + label {
+    display: block;
+    margin: 10px auto; /* Centrer le texte horizontalement avec une marge autour */
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #555;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  
 
-button.operateur{
-    background-color: #fb923c !important;
-}
 
-button.operateur:hover{
-    background-color: #f97316 !important;
-}
-
-#sup{
-    background-color: #b91c1c;
-}
-
-#sup:hover{
-    background-color: #991b1b;
-}
